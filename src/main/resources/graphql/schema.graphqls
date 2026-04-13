@@ -1,0 +1,32 @@
+type Employee {
+    employeeId: ID
+    name: String
+    email: String
+    age: Int
+    department: String
+    salary: Float
+}
+
+input EmployeeInput {
+    name: String
+    email: String
+    age: Int
+    department: String
+    salary: Float
+}
+
+type Query {
+    employees: [Employee]
+    employeeById(id: ID): Employee
+}
+
+type Mutation {
+    createEmployee(input: EmployeeInput): Employee
+    createEmployeeArgs(
+        name: String,
+        email: String,
+        age: Int,
+        department: String,
+        salary: Float
+    ): Employee
+}
