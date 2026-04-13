@@ -14,7 +14,12 @@ spring:
     show-sql: true
 
   graphql:
+    #  Change actual endpoint from we call api in frontend that's  /graphql
     graphiql:
+    # Change UI test end point
+    #  URL : localhost:8080/graphql2?path=graphql 
+    # Bcz UI wants to know API endpoint everytime
+      # path: /graphql2
       enabled: true
 
 server:
